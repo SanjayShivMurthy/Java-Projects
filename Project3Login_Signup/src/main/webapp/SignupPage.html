@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Project1</title>
+</head>
+<style>
+a:link 
+{
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited 
+{
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover 
+{
+  color: rgb(255,130,11);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active 
+{
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+body
+{
+background-image: url(Horus.jpg);
+ background-repeat:no-repeat;
+
+   background-size:cover
+}
+pre
+{
+font-size:20px;
+font-weight:bolder;
+color:rgb(100,100,255);
+}
+.style1
+{
+background-image: linear-gradient(to right, black, rgba(0,0,255,0.9));
+border: 5px dashed black;
+text-align:center;
+}
+.style2
+{
+color:white;
+}
+.Button1
+{
+width:120px;
+height:40px;
+}
+.Button1:hover
+{
+  background-color: blue;
+  color:yellow;
+  text-decoration: underline;
+}
+.style4
+{
+text-align:center;
+font-weight:bolder;
+text-decoration:underline;
+color:rgb(0,0,255);
+
+}
+.canvas1
+{
+  border: 0ch solid black;
+  background-color: white;
+  height: 71px;
+  width:150px;
+  text-align: center;
+
+}
+</style>
+<body>
+<h1 class="style4">Sign Up Form Fill</h1>
+
+<div style="margin-left:24%; width:700px">
+<form action="DatabaseStorage" method="post" class="style1" name="f1" >
+<pre>First Name: <input type="text" name="t1" placeholder="Enter First Name" required> Last Name: <input type="text" name="t2" placeholder="Enter Last Name" required></pre>
+<pre>E-Mail ID         :<input type="text" name="t3" placeholder="Enter E-Mail ID" required></pre>
+<pre>User Name         :<input type="text" name="t4" placeholder="Enter User Name" required></pre>
+<pre>Password          :<input type="password" name="t5" placeholder="Enter Password"  id="p1" required></pre>
+<pre>Confirm Password  :<input type="password" name="t6" placeholder="Confirm Password"  id="p2" required></pre>
+<span id = "id1" style="color:red; font-size: xx-small;"> </span>
+<br>
+<canvas class="canvas1" id ="canvas2">Sanjay</canvas>
+<br>
+<p style="color:red;text-decoration:underline;">Please Enter the Sum Below</p>
+<input type="text" id="i2" name="r2" value="" required>
+<br><br>
+<span id = "id2" style="color:red; font-size: xx-small;"> </span>
+<br>
+
+<input type="checkbox" id="i1" name="r1" value="a" required><label class="style2">I agree to the <a href="terms-and-conditions-template.pdf" target="_blank">terms and conditions.</a></label>
+
+
+<br><br>
+
+<input  type="submit" value="Signup" class="Button1" onclick="return func1()" >
+<p>
+<a href="LoginPage.html">Have an account? Sign in</a>
+</p>
+</form>
+</div>
+<br><br>
+
+</body>
+<script>
+var a1=Math.floor(Math.random() * 100);
+var a2=Math.floor(Math.random() * 100);
+
+var c = document.getElementById("canvas2");
+var ctx = c.getContext("2d");
+ctx.font = "90px Arial";
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("0"," magenta");
+gradient.addColorStop("0.5", "blue");
+gradient.addColorStop("1.0", "red");
+ctx.fillStyle = gradient;
+ctx.fillText(a1+"+"+a2,30,100);
+
+function func1()
+{
+  var pa1=document.getElementById("p1").value;
+  var pa2=document.getElementById("p2").value;
+  var answer=document.getElementById("i2").value;
+ 
+  if(pa1==pa2 && pa1!="" && pa2!="")
+  {
+    document.getElementById("id1").innerHTML="**Password Match**";
+    if(answer==a1+a2)
+    {
+    document.getElementById("id2").innerHTML="**Captcha Match**";
+    //window.location.href="Horus1.html";
+    form.submit();
+    }
+    else
+    {
+    document.getElementById("id2").innerHTML="**Captcha Mismatch**";
+    }
+  }
+  else
+  {
+    document.getElementById("id1").innerHTML="**Password Mismatch**";
+  }
+
+  
+  return false;
+  }
+
+</script>
+</html>

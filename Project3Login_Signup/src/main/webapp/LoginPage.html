@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Project1</title>
+</head>
+<style>
+a:link 
+{
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited 
+{
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover 
+{
+  color: rgb(255,130,11);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active 
+{
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+body
+{
+background-image: url(Horus.jpg);
+background-repeat:no-repeat;
+background-size:cover
+}
+pre
+{
+font-size:20px;
+font-weight:bolder;
+color:rgb(100,100,255);
+}
+.style1
+{
+background-image: linear-gradient(to right, black, rgba(0,0,255,0.9));
+border: 5px dashed black;
+text-align:center;
+}
+.style2
+{
+color:white;
+}
+.Button1
+{
+width:100px;
+height:50px;
+}
+.style4
+{
+text-align:center;
+font-weight:bolder;
+text-decoration:underline;
+color:rgb(0,0,255);
+
+}
+</style>
+<body>
+<h1 class="style4">Login Details</h1>
+<div style="margin-left:33%; width:500px">
+
+<form action="DatabaseStorage" method="get" class="style1" name="f1" >
+
+<pre>Username/E-mail ID:<input type="text" name="t1"></pre>
+<pre>Password          :<input type="password" name="t2"></pre>
+
+<input type="checkbox" id="i1" name="r1" value="a"><label class="style2">Keep me signed in</label>
+
+
+<br><br>
+
+<input  type="submit" value="LOGIN" class="Button1">
+<p>
+<a href="SignupPage.html">Don't Have an account?Signup</a>
+</p>
+</form>
+</div>
+<br><br>
+
+</body>
+<script>
+function func1()
+{
+	alert("Executed");
+}
+</script>
+</html>

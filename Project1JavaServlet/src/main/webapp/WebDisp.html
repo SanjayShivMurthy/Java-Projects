@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Project1</title>
+</head>
+<style>
+pre
+{
+font-size:20px;
+font-weight:bolder;
+}
+.style1
+{
+background-image: linear-gradient(to right, rgba(255, 0,0, 0.1), rgba(255,0,0,1));
+border: 5px dashed black;
+text-align:center;
+}
+.style2
+{
+color:white;
+}
+.style3
+{
+width:100px;
+height:50px;
+}
+</style>
+<body style="background-image: url(batman-hellbat-armor-dc-comics-uhdpaper.com-hd-6.1950.jpg);">
+<h1 style="text-align:center;">Form Fill up</h1>
+<div style="margin-left:38%; width:400px">
+<form action="Servlet1_1" method="post" class="style1">
+<pre>ID      =<input type="text" name="t1"></pre>
+<pre>Name    =<input type="text" name="t2"></pre>
+<pre>Password=<input type="text" name="t3"></pre>
+
+<input type="radio" id="vehicle1" name="r1" value="a"><label class="style2">Update</label>
+<input type="radio" id="vehicle1" name="r1" value="b"><label class="style2">Insert</label>
+<input type="radio" id="vehicle1" name="r1" value="c"><label class="style2">Delete</label>
+
+<br><br>
+
+<input  type="submit" value="Execute" class="style3">
+<p><br></p>
+</form>
+</div>
+<br><br>
+<form action="Servlet1_1" method="get" style="text-align:center; margin-left:50px;">
+<input  type="submit" value="Print Table" class="style3">
+</form>
+</body>
+
+</html>
